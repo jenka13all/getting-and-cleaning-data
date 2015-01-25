@@ -6,11 +6,15 @@ The "run_analysis.R" script can be sourced and run from within any directory con
 UCI-HAR-Dataset/features.txt
 
 UCI-HAR-Dataset/test/X_test.txt
+
 UCI-HAR-Dataset/test/y_test.txt
+
 UCI-HAR-Dataset/test/subject_test.txt
 
 UCI-HAR-Dataset/train/X_train.txt
+
 UCI-HAR-Dataset/train/y_train.txt
+
 UCI-HAR-Dataset/train/subject_train.txt
 
 The script merges all test data (X (the dataset), y (activity data), and subject data) into one data frame, and all train data (X (the dataset), y (activity data), and subject data) into a second data frame. These two data frames are then merged into one single dataset.
