@@ -150,8 +150,13 @@ selectedData$activityDesc <- ifelse(selectedData$activity == 6, "LAYING", select
 #5. From the data set in step 4, creates a second, independent tidy data set with:
  	#the average of each variable for each activity and each subject
 
-#columns to group by: activity and subject
-groupBy <- names(selectedData)[80:81]
-#groupBy #[1] "activity" "subject"
+#columns to group by: activityDesc and subject
+grouped <- group_by(selectedData, activityDesc, subject)
 
-summary <- ddply(selectedData, groupBy, summarize, value=mean(value))
+#summarize the grouped data with mean of each column
+tidy <- summarise_each(grouped, funs(mean))
+
+#write to a text file as a table that can be read by read.table
+write.table(tidy, "tidy-data.txt", row.name=FALSE)
+
+
