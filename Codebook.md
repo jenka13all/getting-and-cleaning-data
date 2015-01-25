@@ -9,6 +9,9 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-X, Y and Z' is used to denote 3-axial signals in the X, Y and Z directions."
 
+These initial measurements were altered in that, for each variable, the mean of all measurements for that variable grouped by activity ("activityDesc") and subject ("subject") were calculated.
+Each observation thus represents a grouping of activity and subject, along with the mean of each variable in this grouping.
+
 Apparently the units for each measure (excepting "activityDesc" and "subject", which are factors) are "g", for gravity.
 
 The following variables are part of the data of tidy-data.txt:
